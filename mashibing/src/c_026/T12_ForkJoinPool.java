@@ -12,12 +12,12 @@ import java.util.concurrent.*;
  * 
  * 将一个任务拆分多个任务执行(可以无限切分),然后将结果合并
  * 
- * 比如大量的并行计算, 如下: 求100_0000个数字之和, 使用多线程
+ * 比如大量的并行计算, 如下: 求1000000个数字之和, 使用多线程
  */
 public class T12_ForkJoinPool {
 
-    static int[] nums = new int[100_0000];
-    static final int MAX_NUM = 5_0000; // 每个线程最多可以运行5万个数字相加
+    static int[] nums = new int[1000000];
+    static final int MAX_NUM = 50000; // 每个线程最多可以运行5万个数字相加
     static Random random = new Random();
     
     // 初始化这100_000个数字, 每个数字范围在100之内
